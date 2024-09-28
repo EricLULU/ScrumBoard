@@ -84,4 +84,4 @@ npm run build
 
 ## 许可证
 
-此项目遵循 MIT 许可证。有关详细信息，请查看 LICENSE 文件。
+此项目遵循 MIT 许可证。有关详细信息，请查看 [LICENSE](https://mit-license.org/) 文件。
