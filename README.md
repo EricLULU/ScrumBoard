@@ -2,6 +2,8 @@
 
 A simple Scrum board tool built with Vue.js and Element Plus, designed to help manage your agile workflow effectively. You can create tasks, organize them into categories like Backlog, To-Do, In-Process, Done, and Problem, and manage notes dynamically.
 
+![img.png](img.png)
+
 ## Features
 
 - **Task Management**: Create, update, and manage tasks across multiple columns.
