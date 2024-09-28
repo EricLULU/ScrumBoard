@@ -61,7 +61,7 @@ Follow these steps to get started:
 
 4. Open the app in your browser:
     ```
-    http://localhost:8080
+    http://localhost:5173
     ```
 
 ### Building for Production
