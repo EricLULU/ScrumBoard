@@ -5,7 +5,7 @@
       <!-- 第一行：标题 -->
       <el-row :span="24" justify="center" align="middle">
         <el-col :span="24" class="text-center">
-          <h1 class="header-title">Scrum Tool</h1>
+          <h1 class="header-title">Scrum Board</h1>
         </el-col>
       </el-row>
 
