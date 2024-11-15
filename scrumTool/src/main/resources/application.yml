@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/scrum_db?useSSL=true&serverTimezone=Asia/Shanghai&createDatabaseIfNotExist=true
+    username: root
+    password: admin@h3c
+  jpa:
+    show-sql: true
+  sql:
+    init:
+      mode: always
+      data-locations: classpath:schema.sql
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#mybatis-plus:
+#  global-config:
+#    db-config:
+#      table-prefix:
+server:
+  port: 8088
+
