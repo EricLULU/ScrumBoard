@@ -2,7 +2,7 @@
 
 这是一个使用 Vue.js 和 Element Plus 构建的简单 Scrum 看板工具，旨在帮助您高效管理敏捷工作流程。您可以创建任务，将它们分类为 Backlog（待办事项）、To-Do（待处理）、In-Process（进行中）、Done（已完成）和 Problem（问题），并动态管理便签。
 
-![img_2.png](img_2.png)
+![img_1.png](img_1.png)
 
 ## 功能
 
