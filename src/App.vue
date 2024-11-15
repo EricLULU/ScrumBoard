@@ -29,6 +29,10 @@
             />
           </div>
         </el-col>
+        <!-- 提交按钮 -->
+        <el-col :span="5" class="text-right">
+          <button @click="submitProjectData" class="submit-button">Submit</button>
+        </el-col>
       </el-row>
     </header>
 
@@ -69,7 +73,8 @@
 
 <script>
 import StickyNote from "@/components/StickyNote.vue";
-import {Tickets} from '@element-plus/icons-vue';
+import { Tickets } from '@element-plus/icons-vue';
+import axios from 'axios';  // 引入 axios
 
 export default {
   components: {
@@ -90,6 +95,28 @@ export default {
     this.bodyContainer = this.$refs.bodyContainer;
   },
   methods: {
+    // 提交项目数据到后端
+    submitProjectData() {
+      const projectName = this.projectName.trim();
+      const numberOfGroup = this.numberOfGroup;
+
+      if (projectName && numberOfGroup > 0) {
+        // 构建接口 URL
+        const url = `http://localhost:8088/update/${projectName}/${numberOfGroup}`;
+
+        // 发送 POST 请求
+        axios.post(url)
+            .then(response => {
+              console.log('Project data updated successfully:', response.data);
+            })
+            .catch(error => {
+              console.error('Error updating project data:', error);
+            });
+      } else {
+        alert('Please provide valid project name and number of members.');
+      }
+    },
+
     addNote() {
       if (!this.bodyContainer) {
         console.error('Body container is not loaded');
@@ -114,7 +141,21 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+/* 提交按钮样式 */
+.submit-button {
+  background-color: #06f526;
+  color: white;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.submit-button:hover {
+  background-color: #04c21a;
+}
+
 /* 全局布局样式 */
 body {
   margin: 0;
