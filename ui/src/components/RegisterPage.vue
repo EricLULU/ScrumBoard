@@ -9,16 +9,25 @@
           label-width="100px"
       >
         <el-form-item label="用户名" prop="username">
-          <el-input v-model="registerForm.username" placeholder="请输入用户名" />
+          <el-input
+              v-model="registerForm.username"
+              placeholder="请输入用户名"
+              @input="changeMessage($event)"
+          />
         </el-form-item>
         <el-form-item label="邮箱" prop="email">
-          <el-input v-model="registerForm.email" placeholder="请输入邮箱" />
+          <el-input
+              v-model="registerForm.email"
+              placeholder="请输入邮箱"
+              @input="changeMessage($event)"
+          />
         </el-form-item>
         <el-form-item label="密码" prop="password">
           <el-input
               v-model="registerForm.password"
               placeholder="请输入密码"
               type="password"
+              @input="changeMessage($event)"
           />
         </el-form-item>
         <el-form-item>
@@ -84,7 +93,11 @@ export default {
       router.push('/login');
     };
 
-    return { registerForm, rules, onRegister, toLogin };
+    const changeMessage =() =>{
+      this.$forceUpdate()
+    };
+
+    return { registerForm, rules, onRegister, toLogin, changeMessage};
   },
 };
 </script>
