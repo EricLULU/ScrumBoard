@@ -5,3 +5,11 @@ CREATE TABLE if not exists `scrum_tool_tbl`  (
    `number` int(11)  NOT NULL,
    PRIMARY KEY (`id`)
 );
+
+CREATE TABLE if not exists `scrum_user_tbl`  (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `name` varchar(64)  NOT NULL,
+    `email` varchar(64)   NOT NULL,
+    `password` varchar(64)   NOT NULL,
+    PRIMARY KEY (`id`)
+    );
