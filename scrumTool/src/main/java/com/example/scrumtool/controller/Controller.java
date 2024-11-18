@@ -17,6 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@CrossOrigin
 @RestController("/")
 public class Controller {
     Logger logger = LoggerFactory.getLogger(Controller.class);
@@ -60,20 +61,24 @@ public class Controller {
         } catch (Exception e) {
             logger.error("failed to insert the user info");
         }
+        logger.info("{} register in system", user);
         return HttpStatus.OK.toString();
     }
     
     //登入接口
     @PostMapping("login")
     public ResponseEntity<String> login(@RequestBody User user) {
+        logger.info("{} login system", user);
         Map<String, Object> queryMap = new HashMap<>();
         queryMap.put("name", user.getName());
         queryMap.put("password", user.getPassword());
        
         List<User> userList = userMapper.selectByMap(queryMap);
         if (userList == null || userList.isEmpty()) {
+            logger.info("{} login error", user);
             return new ResponseEntity(HttpStatus.FORBIDDEN);
         } else {
+            logger.info("{} login success", user);
             return new ResponseEntity(HttpStatus.OK);
         }
     }
