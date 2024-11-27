@@ -8,38 +8,38 @@
           ref="formRef"
       label-width="100px"
       >
-      <el-form-item label="用户名" prop="username">
+      <el-form-item label="UserName" prop="username">
         <el-input
             v-model="registerForm.username"
-            placeholder="请输入用户名"
+            placeholder="Please enter a username"
             @input="changeMessage($event)"
         />
       </el-form-item>
       <!-- 角色选择框 -->
-      <el-form-item label="角色" prop="role">
-         <el-select v-model="registerForm.role" placeholder="请选择角色">
+      <el-form-item label="Role" prop="role">
+         <el-select v-model="registerForm.role" placeholder="Please select a role">
            <el-option label="Leader" value="leader"></el-option>
            <el-option label="Member" value="member"></el-option>
          </el-select>
       </el-form-item>
-      <el-form-item label="密码" prop="password">
+      <el-form-item label="Password" prop="password">
         <el-input
             v-model="registerForm.password"
-            placeholder="请输入密码"
+            placeholder="Please enter your password"
             type="password"
             @input="changeMessage($event)"
         />
       </el-form-item>
-      <el-form-item label="邮箱" prop="email">
+      <el-form-item label="Email" prop="email">
         <el-input
             v-model="registerForm.email"
-            placeholder="请输入邮箱"
+            placeholder="Please enter your email address"
             @input="changeMessage($event)"
         />
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onRegister">注册</el-button>
-        <el-button type="text" @click="toLogin">返回登录</el-button>
+        <el-button type="primary" @click="onRegister">Register</el-button>
+        <el-button type="text" @click="toLogin">Login</el-button>
       </el-form-item>
       </el-form>
     </el-card>
@@ -64,13 +64,13 @@ export default {
     });
 
     const rules = {
-      username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
-      role: [{ required: true, message: '请选择角色', trigger: 'blur' }],
+      username: [{ required: true, message: 'Please enter a username', trigger: 'blur' }],
+      role: [{ required: true, message: 'Please select a role', trigger: 'blur' }],
       email: [
-        { required: true, message: '请输入邮箱', trigger: 'blur' },
-        { type: 'email', message: '请输入正确的邮箱格式', trigger: 'blur' },
+        { required: true, message: 'Please enter your email address', trigger: 'blur' },
+        { type: 'email', message: 'Please enter the correct email address', trigger: 'blur' },
       ],
-      password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
+      password: [{ required: true, message: 'Please enter your password', trigger: 'blur' }],
     };
 
     const formRef = ref(null);  // 正确的 ref 引用方式
@@ -89,14 +89,14 @@ export default {
         });
 
         if (response.status === 200) {
-          ElMessage.success('注册成功，请登录！');
+          ElMessage.success('Successful registration, please log in!');
           router.push('/login'); // 跳转到登录页面
         } else {
-          ElMessage.error('注册失败，请稍后再试！');
+          ElMessage.error('Registration failed, please try again later!');
         }
       } catch (error) {
-        console.error('注册失败:', error);
-        ElMessage.error(error.response?.data?.message || '注册失败，请稍后再试！');
+        console.error('Registration failed:', error);
+        ElMessage.error(error.response?.data?.message || 'Registration failed, please try again later!');
       }
     };
 

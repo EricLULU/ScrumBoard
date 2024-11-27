@@ -8,31 +8,31 @@
           ref="formRef"
           label-width="100px"
       >
-        <el-form-item label="用户名" prop="username">
+        <el-form-item label="User Name" prop="username">
           <el-input
               v-model="loginForm.username"
-              placeholder="请输入用户名"
+              placeholder="Please enter a username."
               @input="changeMessage($event)"
           />
         </el-form-item>
-        <el-form-item label="邮箱" prop="email">
+        <el-form-item label="Email" prop="email">
           <el-input
               v-model="loginForm.email"
-              placeholder="请输入邮箱"
+              placeholder="Please enter your email address."
               @input="changeMessage($event)"
           />
         </el-form-item>
-        <el-form-item label="密码" prop="password">
+        <el-form-item label="Password" prop="password">
           <el-input
               v-model="loginForm.password"
-              placeholder="请输入密码"
+              placeholder="Please enter your password."
               type="password"
               @input="changeMessage($event)"
           />
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="onLogin">注册</el-button>
-          <el-button type="text" @click="toLogin">返回登录</el-button>
+          <el-button type="primary" @click="onLogin">Login</el-button>
+          <el-button type="text" @click="toRegister">Register</el-button>
         </el-form-item>
       </el-form>
     </el-card>
