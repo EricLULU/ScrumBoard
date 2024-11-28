@@ -56,12 +56,12 @@ export default {
     });
 
     const rules = {
-      username: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
+      username: [{ required: true, message: 'Please enter a username', trigger: 'blur' }],
       email: [
-        { required: true, message: '请输入邮箱', trigger: 'blur' },
-        { type: 'email', message: '请输入正确的邮箱格式', trigger: 'blur' },
+        { required: true, message: 'Please enter your email address', trigger: 'blur' },
+        { type: 'email', message: 'Please enter the correct email address', trigger: 'blur' },
       ],
-      password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
+      password: [{ required: true, message: 'Please enter your password', trigger: 'blur' }],
     };
 
     const formRef = ref(null);  // 正确的 ref 引用方式

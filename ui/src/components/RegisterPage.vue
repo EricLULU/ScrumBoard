@@ -1,7 +1,7 @@
 <template>
   <div class="register-page">
     <el-card class="register-card" shadow="hover">
-      <h2>注册</h2>
+      <h2>Register</h2>
       <el-form
           :model="registerForm"
           :rules="rules"

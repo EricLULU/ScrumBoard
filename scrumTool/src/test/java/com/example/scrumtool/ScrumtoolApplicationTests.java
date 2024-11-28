@@ -16,22 +16,16 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 class ScrumtoolApplicationTests extends BaseTest{
-
 	@Autowired
 	Controller controller;
-	
 	private MockMvc mockMvc;
-	
 	@Before
 	public void setup() {
 		mockMvc = MockMvcBuilders.standaloneSetup(controller).build();
 	}
-	
 	@Test
 	void testUpdateGroupInfo() {
-		
 		try {
-			
 			MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.post("update/test/12")
 							.accept(MediaType.APPLICATION_JSON))
 					.andExpect(MockMvcResultMatchers.status().isOk())
@@ -42,7 +36,6 @@ class ScrumtoolApplicationTests extends BaseTest{
 			//
 		}
 	}
-	
 	@Test
 	void testRegister() {
 		try {
