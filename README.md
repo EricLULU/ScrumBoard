@@ -14,8 +14,8 @@ A simple Scrum board tool built with Vue.js and Element Plus, designed to help m
 - **Chalkboard UI**: Stylish chalkboard-like UI for an engaging experience.
 
 ## Demo
-
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113570729695479&bvid=BV1FVzEYsEMG&cid=27106676074&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+【Video Clip for ScrumBoard】 https://www.bilibili.com/video/BV1FVzEYsEMG/?
+share_source=copy_web&vd_source=79d1f3947abd2f658f6e6303271d4fb3
 
 ## Project Features
 ```php
