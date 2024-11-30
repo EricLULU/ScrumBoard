@@ -15,7 +15,7 @@ A simple Scrum board tool built with Vue.js and Element Plus, designed to help m
 
 ## Demo
 
-waiting
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113570729695479&bvid=BV1FVzEYsEMG&cid=27106676074&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## Project Features
 ```php
