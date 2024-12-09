@@ -18,23 +18,49 @@
 
 ## 项目结构
 ```php
+scrumTool
 ├── src
-│   ├── assets         # 静态资源，例如图片和图标
-│   ├── components     # Vue 组件
-│   ├── views          # 应用程序的不同视图
-│   ├── App.vue        # 主应用组件
-│   ├── main.js        # 应用程序的入口文件
-├── public             # 公共文件 (index.html, favicon 等)
-├── package.json       # 项目信息和依赖管理
-├── README.md          # 项目文档
-└── ...
+│   ├── main
+│   │   ├── java
+│   │   │   ├── com.example.scrumtool
+│   │   │       ├── controller          # REST API controllers
+│   │   │       │   └── Controller.java  # Handles API requests
+│   │   │       ├── dao                 # Data Access Objects (DAO)
+│   │   │       │   ├── ProjectInfo.java # Represents project entities
+│   │   │       │   └── User.java        # Represents user entities
+│   │   │       ├── mapper              # Mappers for database interactions
+│   │   │       │   ├── ProjectBaseMapper.java # Mapper for project data
+│   │   │       │   └── UserMapper.java        # Mapper for user data
+│   │   │       └── ScrumtoolApplication.java # Main application class
+│   │   ├── resources
+│   │       ├── assets                 # Static assets like images and icons
+│   │       ├── application.yml        # Application configuration
+│   │       ├── index.html             # Frontend entry file
+│   │       └── schema.sql             # Database schema definitions
+│   ├── test                          # Unit and integration tests
+│       └── ...                        # Test files
+├── .mvn                              # Maven wrapper files
+├── HELP.md                           # Help documentation
+├── pom.xml                           # Project metadata and dependencies
+├── README.md                         # Project documentation
+ui
+├── src
+│   ├── assets         # Static assets like images and icons
+│   ├── components     # Vue components
+│   ├── views          # Different views for the application
+│   ├── App.vue        # Main application component
+│   ├── main.js        # Application entry point
+├── public             # Public files (index.html, favicon, etc.)
+├── package.json       # Project metadata and dependencies
+├── README.md          # Project documentation
+└── ... 
 ```
 
 ## 入门指南
 
 ### 先决条件
 
-确保您的系统上已安装 Node.js 和 npm。
+确保您的系统上已安装java, vue3 Node.js 和 npm。
 
 - [Node.js](https://nodejs.org/en/download/) (版本 12.x 或更高)
 - [npm](https://www.npmjs.com/get-npm)
@@ -51,6 +77,7 @@
 
 2. 安装依赖项：
     ```bash
+    cd ui
     npm install
     ```
 
@@ -59,7 +86,9 @@
     npm run serve
     ```
 
-4. 在浏览器中打开应用：
+4. 运行后端
+
+5. 在浏览器中打开应用：
     ```
     http://localhost:5173
     ```
